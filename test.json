@@ -1,0 +1,192 @@
+{
+    "t": "GUILD_CREATE",
+    "s": 3,
+    "op": 0,
+    "d": {
+        "lazy": true,
+        "member_count": 6,
+        "name": "Area 53",
+        "explicit_content_filter": 0,
+        "vanity_url_code": null,
+        "description": null,
+        "max_members": 250000,
+        "mfa_level": 0,
+        "stage_instances": [],
+        "emojis": [],
+        "application_id": null,
+        "banner": null,
+        "splash": null,
+        "afk_timeout": 300,
+        "verification_level": 0,
+        "system_channel_flags": 0,
+        "unavailable": false,
+        "joined_at": "2021-05-30T19:22:09.440000+00:00",
+        "roles": [
+            {
+                "unicode_emoji": null,
+                "position": 0,
+                "permissions": "1071698660929",
+                "name": "@everyone",
+                "mentionable": false,
+                "managed": false,
+                "id": "839888126399086593",
+                "icon": null,
+                "hoist": false,
+                "color": 0
+            },
+            {
+                "unicode_emoji": null,
+                "position": 1,
+                "permissions": "6546771529",
+                "name": "admin",
+                "mentionable": false,
+                "managed": false,
+                "id": "840630376963375105",
+                "icon": null,
+                "hoist": false,
+                "color": 3447003
+            },
+            {
+                "unicode_emoji": null,
+                "tags": {
+                    "bot_id": "794103318250782741"
+                },
+                "position": 1,
+                "permissions": "8",
+                "name": "AntiCamel",
+                "mentionable": false,
+                "managed": true,
+                "id": "848642459458207775",
+                "icon": null,
+                "hoist": false,
+                "color": 0
+            }
+        ],
+        "default_message_notifications": 0,
+        "large": false,
+        "rules_channel_id": null,
+        "features": [],
+        "icon": "e158bd2906043b253f7ca328de9b2130",
+        "application_command_counts": {
+            "3": 0,
+            "2": 0,
+            "1": 2
+        },
+        "threads": [],
+        "nsfw_level": 0,
+        "application_command_count": 2,
+        "voice_states": [],
+        "premium_progress_bar_enabled": false,
+        "public_updates_channel_id": null,
+        "max_video_channel_users": 25,
+        "premium_tier": 0,
+        "id": "839888126399086593",
+        "system_channel_id": "839888127148425269",
+        "embedded_activities": [],
+        "preferred_locale": "en-US",
+        "afk_channel_id": null,
+        "nsfw": false,
+        "owner_id": "533530255172829184",
+        "presences": [],
+        "discovery_splash": null,
+        "channels": [
+            {
+                "type": 4,
+                "position": 0,
+                "permission_overwrites": [],
+                "name": "Text Channels",
+                "id": "839888127148425267"
+            },
+            {
+                "type": 4,
+                "position": 0,
+                "permission_overwrites": [],
+                "name": "Voice Channels",
+                "id": "839888127148425268"
+            },
+            {
+                "type": 0,
+                "topic": null,
+                "rate_limit_per_user": 0,
+                "position": 0,
+                "permission_overwrites": [],
+                "parent_id": "839888127148425267",
+                "name": "general",
+                "last_message_id": "862428144384344124",
+                "id": "839888127148425269"
+            },
+            {
+                "user_limit": 0,
+                "type": 2,
+                "rtc_region": null,
+                "rate_limit_per_user": 0,
+                "position": 0,
+                "permission_overwrites": [],
+                "parent_id": "839888127148425268",
+                "name": "General",
+                "last_message_id": null,
+                "id": "839888127148425270",
+                "bitrate": 64000
+            },
+            {
+                "type": 0,
+                "topic": null,
+                "rate_limit_per_user": 0,
+                "position": 1,
+                "permission_overwrites": [],
+                "parent_id": "839888127148425267",
+                "name": "client",
+                "last_message_id": "874513808419328060",
+                "id": "841071077731467305"
+            },
+            {
+                "type": 0,
+                "topic": null,
+                "rate_limit_per_user": 0,
+                "position": 2,
+                "permission_overwrites": [],
+                "parent_id": "839888127148425267",
+                "name": "smp",
+                "last_message_id": "864271651624452116",
+                "id": "841334991099133982"
+            }
+        ],
+        "premium_subscription_count": 0,
+        "members": [
+            {
+                "user": {
+                    "username": "AntiCamel",
+                    "id": "794103318250782741",
+                    "discriminator": "4865",
+                    "bot": true,
+                    "avatar": "106e4350e534daf12d47b8528b9aad5a"
+                },
+                "roles": [
+                    "848642459458207775"
+                ],
+                "mute": false,
+                "joined_at": "2021-05-30T19:22:09.440000+00:00",
+                "hoisted_role": null,
+                "deaf": false
+            }
+        ],
+        "guild_scheduled_events": [],
+        "guild_hashes": {
+            "version": 1,
+            "roles": {
+                "omitted": false,
+                "hash": "SUSNvXIvE8w"
+            },
+            "metadata": {
+                "omitted": false,
+                "hash": "deXr7cl1xoU"
+            },
+            "channels": {
+                "omitted": false,
+                "hash": "Q4CGcyNItV8"
+            }
+        },
+        "region": "us-west",
+        "stickers": []
+    }
+}
