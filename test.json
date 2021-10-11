@@ -3,92 +3,97 @@
     "s": 3,
     "op": 0,
     "d": {
-        "lazy": true,
-        "member_count": 6,
-        "name": "Area 53",
-        "explicit_content_filter": 0,
-        "vanity_url_code": null,
-        "description": null,
-        "max_members": 250000,
-        "mfa_level": 0,
-        "stage_instances": [],
+        "stickers": [],
         "emojis": [],
-        "application_id": null,
-        "banner": null,
-        "splash": null,
-        "afk_timeout": 300,
-        "verification_level": 0,
+        "premium_subscription_count": 0,
+        "vanity_url_code": null,
+        "mfa_level": 0,
+        "name": "Area 53",
+        "stage_instances": [],
+        "preferred_locale": "en-US",
+        "rules_channel_id": null,
+        "description": null,
         "system_channel_flags": 0,
-        "unavailable": false,
-        "joined_at": "2021-05-30T19:22:09.440000+00:00",
-        "roles": [
+        "afk_timeout": 300,
+        "presences": [
             {
-                "unicode_emoji": null,
-                "position": 0,
-                "permissions": "1071698660929",
-                "name": "@everyone",
-                "mentionable": false,
-                "managed": false,
-                "id": "839888126399086593",
-                "icon": null,
-                "hoist": false,
-                "color": 0
-            },
-            {
-                "unicode_emoji": null,
-                "position": 1,
-                "permissions": "6546771529",
-                "name": "admin",
-                "mentionable": false,
-                "managed": false,
-                "id": "840630376963375105",
-                "icon": null,
-                "hoist": false,
-                "color": 3447003
-            },
-            {
-                "unicode_emoji": null,
-                "tags": {
-                    "bot_id": "794103318250782741"
+                "user": {
+                    "id": "475995695220916242"
                 },
-                "position": 1,
-                "permissions": "8",
-                "name": "AntiCamel",
-                "mentionable": false,
-                "managed": true,
-                "id": "848642459458207775",
-                "icon": null,
-                "hoist": false,
-                "color": 0
+                "status": "online",
+                "client_status": {
+                    "desktop": "online"
+                },
+                "activities": []
+            },
+            {
+                "user": {
+                    "id": "533530255172829184"
+                },
+                "status": "online",
+                "client_status": {
+                    "desktop": "online"
+                },
+                "activities": [
+                    {
+                        "type": 4,
+                        "state": "I wish there was a way to know you're in \"the good old days\", before you've actually left them.",
+                        "name": "Custom Status",
+                        "id": "custom",
+                        "created_at": 1633886052286
+                    },
+                    {
+                        "type": 0,
+                        "timestamps": {
+                            "start": 1633758048897
+                        },
+                        "state": "Workspace: rust_cord",
+                        "session_id": "6919b1ba41e976da62d74c2946ff47fb",
+                        "name": "Visual Studio Code",
+                        "id": "f22d67cda7071e3e",
+                        "details": "Editing loops.rs",
+                        "created_at": 1633887406918,
+                        "buttons": [
+                            "View Repository"
+                        ],
+                        "assets": {
+                            "small_text": "Visual Studio Code",
+                            "small_image": "565945770067623946",
+                            "large_text": "Editing a RUST file",
+                            "large_image": "565945350771441676"
+                        },
+                        "application_id": "383226320970055681"
+                    }
+                ]
+            },
+            {
+                "user": {
+                    "id": "794103318250782741"
+                },
+                "status": "online",
+                "client_status": {
+                    "web": "online"
+                },
+                "activities": []
             }
         ],
-        "default_message_notifications": 0,
-        "large": false,
-        "rules_channel_id": null,
-        "features": [],
-        "icon": "e158bd2906043b253f7ca328de9b2130",
-        "application_command_counts": {
-            "3": 0,
-            "2": 0,
-            "1": 2
+        "member_count": 6,
+        "guild_hashes": {
+            "version": 1,
+            "roles": {
+                "omitted": false,
+                "hash": "SUSNvXIvE8w"
+            },
+            "metadata": {
+                "omitted": false,
+                "hash": "deXr7cl1xoU"
+            },
+            "channels": {
+                "omitted": false,
+                "hash": "Q4CGcyNItV8"
+            }
         },
-        "threads": [],
-        "nsfw_level": 0,
-        "application_command_count": 2,
-        "voice_states": [],
-        "premium_progress_bar_enabled": false,
-        "public_updates_channel_id": null,
-        "max_video_channel_users": 25,
-        "premium_tier": 0,
-        "id": "839888126399086593",
-        "system_channel_id": "839888127148425269",
-        "embedded_activities": [],
-        "preferred_locale": "en-US",
         "afk_channel_id": null,
-        "nsfw": false,
-        "owner_id": "533530255172829184",
-        "presences": [],
-        "discovery_splash": null,
         "channels": [
             {
                 "type": 4,
@@ -151,8 +156,150 @@
                 "id": "841334991099133982"
             }
         ],
-        "premium_subscription_count": 0,
+        "max_members": 250000,
+        "lazy": true,
+        "banner": null,
+        "unavailable": false,
+        "large": false,
+        "joined_at": "2021-05-30T19:22:09.440000+00:00",
+        "public_updates_channel_id": null,
+        "voice_states": [],
+        "features": [],
+        "explicit_content_filter": 0,
+        "default_message_notifications": 0,
+        "region": "us-west",
+        "splash": null,
+        "threads": [],
+        "premium_tier": 0,
+        "premium_progress_bar_enabled": false,
+        "nsfw": false,
+        "application_command_count": 2,
+        "discovery_splash": null,
+        "nsfw_level": 0,
+        "id": "839888126399086593",
+        "embedded_activities": [],
+        "application_id": null,
+        "verification_level": 0,
+        "max_video_channel_users": 25,
+        "owner_id": "533530255172829184",
+        "roles": [
+            {
+                "unicode_emoji": null,
+                "position": 0,
+                "permissions": "1071698660929",
+                "name": "@everyone",
+                "mentionable": false,
+                "managed": false,
+                "id": "839888126399086593",
+                "icon": null,
+                "hoist": false,
+                "color": 0
+            },
+            {
+                "unicode_emoji": null,
+                "position": 1,
+                "permissions": "6546771529",
+                "name": "admin",
+                "mentionable": false,
+                "managed": false,
+                "id": "840630376963375105",
+                "icon": null,
+                "hoist": false,
+                "color": 3447003
+            },
+            {
+                "unicode_emoji": null,
+                "tags": {
+                    "bot_id": "794103318250782741"
+                },
+                "position": 1,
+                "permissions": "8",
+                "name": "AntiCamel",
+                "mentionable": false,
+                "managed": true,
+                "id": "848642459458207775",
+                "icon": null,
+                "hoist": false,
+                "color": 0
+            }
+        ],
+        "system_channel_id": "839888127148425269",
+        "icon": "e158bd2906043b253f7ca328de9b2130",
+        "application_command_counts": {
+            "3": 0,
+            "2": 0,
+            "1": 2
+        },
         "members": [
+            {
+                "user": {
+                    "username": "thedude7054",
+                    "public_flags": 131200,
+                    "id": "128252519292993536",
+                    "discriminator": "0001",
+                    "avatar": "a_d34e1a568b75bad37697cda730397f37"
+                },
+                "roles": [],
+                "mute": false,
+                "joined_at": "2021-07-07T20:19:41.337000+00:00",
+                "hoisted_role": null,
+                "deaf": false
+            },
+            {
+                "user": {
+                    "username": "Ncdiddi",
+                    "id": "418556816570449931",
+                    "discriminator": "4481",
+                    "avatar": "a76f36fd8d0254210d475b345ed09ec5"
+                },
+                "roles": [],
+                "mute": false,
+                "joined_at": "2021-05-16T21:56:02.734000+00:00",
+                "hoisted_role": null,
+                "deaf": false
+            },
+            {
+                "user": {
+                    "username": "FGamerJ",
+                    "public_flags": 128,
+                    "id": "475995695220916242",
+                    "discriminator": "9611",
+                    "avatar": "1eaeb1edfad86e71cad2174decf70467"
+                },
+                "roles": [],
+                "mute": false,
+                "joined_at": "2021-07-07T20:21:32.711000+00:00",
+                "hoisted_role": null,
+                "deaf": false
+            },
+            {
+                "user": {
+                    "username": "jkcoxson",
+                    "id": "533530255172829184",
+                    "discriminator": "1917",
+                    "avatar": "7a05a04170c3c12c3cc9774e9d91e3ed"
+                },
+                "roles": [
+                    "840630376963375105"
+                ],
+                "mute": false,
+                "joined_at": "2021-05-06T15:35:33.823000+00:00",
+                "hoisted_role": null,
+                "deaf": false
+            },
+            {
+                "user": {
+                    "username": "AxoSpyeyes",
+                    "id": "673252323455402004",
+                    "discriminator": "1984",
+                    "avatar": "e49dde036826f5331c808004902f1dc6"
+                },
+                "roles": [],
+                "mute": false,
+                "joined_at": "2021-05-06T15:44:31.651000+00:00",
+                "hoisted_role": null,
+                "deaf": false
+            },
             {
                 "user": {
                     "username": "AntiCamel",
@@ -170,23 +317,6 @@
                 "deaf": false
             }
         ],
-        "guild_scheduled_events": [],
-        "guild_hashes": {
-            "version": 1,
-            "roles": {
-                "omitted": false,
-                "hash": "SUSNvXIvE8w"
-            },
-            "metadata": {
-                "omitted": false,
-                "hash": "deXr7cl1xoU"
-            },
-            "channels": {
-                "omitted": false,
-                "hash": "Q4CGcyNItV8"
-            }
-        },
-        "region": "us-west",
-        "stickers": []
+        "guild_scheduled_events": []
     }
 }

@@ -1,0 +1,3 @@
+// jkcoxson
+
+pub struct GuildMember {}
