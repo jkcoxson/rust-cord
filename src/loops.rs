@@ -129,7 +129,7 @@ impl Channels {
 }
 
 async fn handle_packet(client_data: Arc<Mutex<ClientData>>, raw_packet: String) {
-    println!("{}", raw_packet);
+    //println!("{}", raw_packet);
     let mut guard = client_data.lock().await;
     let v: Option<Value> = serde_json::from_str(&raw_packet).unwrap_or(None);
     match v {
@@ -138,9 +138,24 @@ async fn handle_packet(client_data: Arc<Mutex<ClientData>>, raw_packet: String) 
                 Value::Number(opcode) => {
                     println!("opcode: {}", opcode);
                     match opcode.as_i64().unwrap() {
-                        0 => {
-                            println!("op 0");
-                        }
+                        0 => match &rawpkt["t"].as_str() {
+                            Some(t) => match t.to_owned() {
+                                "MESSAGE_CREATE" => {
+                                    let message = crate::message::Message::new(rawpkt["d"].clone());
+                                    let id = message.id.clone();
+                                    guard.messages.insert(id, message);
+                                    guard
+                                        .callbacks
+                                        .message_create
+                                        .get(0)
+                                        .unwrap()
+                                        .send(id)
+                                        .unwrap();
+                                }
+                                _ => {}
+                            },
+                            None => {}
+                        },
                         7 => {
                             todo!("Reconnect when recieving a request to do so");
                         }

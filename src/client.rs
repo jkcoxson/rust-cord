@@ -3,19 +3,19 @@
 // Based from this ^^
 
 use futures_util::StreamExt;
+use std::collections::HashMap;
 use std::mem::drop;
 use std::sync::Arc;
-use std::time::Duration;
 use tokio::sync::mpsc::unbounded_channel;
 use tokio::sync::Mutex;
 use tokio_tungstenite::connect_async;
 use url;
 
-use crate::callbacks::{self, Callbacks};
+use crate::callbacks::Callbacks;
 use crate::{loops, message::Message, opcodes};
 
 pub struct Client {
-    client_data: Arc<Mutex<ClientData>>,
+    pub client_data: Arc<Mutex<ClientData>>,
 }
 
 pub struct ClientData {
@@ -23,6 +23,7 @@ pub struct ClientData {
     pub callbacks: Callbacks,
     loops: loops::Channels,
     pub last_packet_id: u64,
+    pub messages: HashMap<u64, Message>,
 }
 
 impl ClientData {
@@ -32,6 +33,7 @@ impl ClientData {
             callbacks: Callbacks::new(),
             loops: loops::Channels::new(),
             last_packet_id: 0,
+            messages: HashMap::new(),
         }
     }
 }
@@ -115,13 +117,12 @@ impl Client {
     // }
 
     /// Adds a function callback that will always fire when an event goes off
-    pub async fn on_message_create(&self, id: u16) -> Option<Message> {
+    pub async fn on_message_create(&self) -> u64 {
         let mut guard = self.client_data.lock().await;
-        let (usx, mut usr) = unbounded_channel::<Message>();
-        guard
-            .callbacks
-            .message_create
-            .push(callbacks::MessageCreateCallback::new(usx, id, false));
-        usr.recv().await
+        let (usx, mut usr) = unbounded_channel::<u64>();
+        guard.callbacks.message_create.push(usx);
+        drop(guard);
+        let id = usr.recv().await.unwrap();
+        id
     }
 }

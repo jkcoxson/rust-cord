@@ -1,17 +1,19 @@
 // jkcoxson
 // Represents a message
 
-use crate::{channel::Channel, guild_member::GuildMember};
+use serde_json::Value;
 
 pub struct Message {
-    content: String,
+    pub content: String,
     // author: GuildMember,
     // channel: Channel,
-    id: u64,
+    pub id: u64,
 }
 
 impl Message {
-    // pub fn new() -> Self {
-    //     Message {}
-    // }
+    pub fn new(d: Value) -> Self {
+        let content = d["content"].as_str().unwrap().to_string();
+        let id: u64 = d["id"].as_str().unwrap().parse::<u64>().unwrap();
+        Message { content, id }
+    }
 }
