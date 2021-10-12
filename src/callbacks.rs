@@ -5,13 +5,13 @@ use crate::message::Message;
 // jkcoxson
 
 pub struct Callbacks {
-    MessageCreate: Vec<MessageCreateCallback>,
+    pub message_create: Vec<MessageCreateCallback>,
 }
 
 impl Callbacks {
     pub fn new() -> Self {
         Callbacks {
-            MessageCreate: vec![],
+            message_create: vec![],
         }
     }
 }

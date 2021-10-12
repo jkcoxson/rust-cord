@@ -77,12 +77,12 @@ impl Channels {
                 rcvd = write_receiver.recv() => {
                     match rcvd {
                         Some(msg) => {
-                        match writer.send(Message::Text(msg.to_owned())).await {
-                            _ => {
-                                // yay error handling
-                                // I don't care
+                            match writer.send(Message::Text(msg.to_owned())).await {
+                                _ => {
+                                    // yay error handling
+                                    // I don't care
+                                }
                             }
-                        }
                     }
                     None => {}
                     }
@@ -95,6 +95,7 @@ impl Channels {
         arc_reactor: Arc<Mutex<ClientData>>,
         sender: UnboundedSender<String>,
     ) {
+        println!("Enter heartbeat");
         let mut interval = 5000;
         loop {
             let sleep = time::sleep(Duration::from_millis(interval));
@@ -138,11 +139,7 @@ async fn handle_packet(client_data: Arc<Mutex<ClientData>>, raw_packet: String) 
                     println!("opcode: {}", opcode);
                     match opcode.as_i64().unwrap() {
                         0 => {
-                            // let callbacks = guard.callbacks.clone();
-                            // drop(guard);
-                            // callbacks.iter().for_each(|function| {
-                            //     function.run();
-                            // })
+                            println!("op 0");
                         }
                         7 => {
                             todo!("Reconnect when recieving a request to do so");
@@ -165,6 +162,7 @@ async fn handle_packet(client_data: Arc<Mutex<ClientData>>, raw_packet: String) 
                 }
                 _ => {}
             }
+            drop(guard);
             // Handle S values for reconnects
             let mut s_guard = client_data.lock().await;
             match &rawpkt["s"] {

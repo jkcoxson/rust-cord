@@ -3,9 +3,10 @@
 // Based from this ^^
 
 use futures_util::StreamExt;
-use std::borrow::Borrow;
 use std::mem::drop;
 use std::sync::Arc;
+use std::time::Duration;
+use tokio::sync::mpsc::unbounded_channel;
 use tokio::sync::Mutex;
 use tokio_tungstenite::connect_async;
 use url;
@@ -100,9 +101,8 @@ impl Client {
                     .replace("\"{", "{")
                     .replace("}\"", "}"),
             ) {
-                _ => {
-                    // lol
-                }
+                Ok(_) => {}
+                Err(_) => panic!("Error sending identification packet"),
             }
         });
     }
@@ -115,7 +115,13 @@ impl Client {
     // }
 
     /// Adds a function callback that will always fire when an event goes off
-    pub async fn on_message_create(&self, function: fn(Message), id: u16) {
+    pub async fn on_message_create(&self, id: u16) -> Option<Message> {
         let mut guard = self.client_data.lock().await;
+        let (usx, mut usr) = unbounded_channel::<Message>();
+        guard
+            .callbacks
+            .message_create
+            .push(callbacks::MessageCreateCallback::new(usx, id, false));
+        usr.recv().await
     }
 }
